@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive rating component</title>
+</head>
+<body>
+<!-- Rate Section -->
+<main id="rate" tabindex="-1"  >
+  <header>
+    <figure class="main-figure">
+      <img src="images/icon-star.svg" alt="Star icon indicating rating">
+    </figure>
+    <h2>How did we do?</h2>
+    <p>
+      Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+    </p>
+  </header>
+  
+  <!-- Rating Options using Accessible Buttons -->
+  <section aria-label="Rating Options" role="radiogroup" class="rates">
+    <button type="button" role="radio" aria-checked="false" tabindex="0" data-value="1">1</button>
+    <button type="button" role="radio" aria-checked="false" tabindex="0" data-value="2">2</button>
+    <button type="button" role="radio" aria-checked="false" tabindex="0" data-value="3">3</button>
+    <button type="button" role="radio" aria-checked="false" tabindex="0" data-value="4">4</button>
+    <button type="button" role="radio" aria-checked="false" tabindex="0" data-value="5">5</button>
+  </section>
+  
+  <!-- Submit Button -->
+  <button type="button" id="submitRating" class="submitbtn">Submit</button>
+</main>
+
+<!-- Thank You Section (hidden until submission) -->
+<section id="thank" aria-live="polite" class="thank" >
+  <header>
+    <figure>
+      <img src="images/illustration-thank-you.svg" alt="Thank you illustration">
+    </figure>
+  </header>
+  <article>
+    <p>You selected <span id="selectedRating">3</span> out of 5</p>
+  </article>
+  <section>
+    <h2>Thank you!</h2>
+    <p>
+      We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+    </p>
+  </section>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>

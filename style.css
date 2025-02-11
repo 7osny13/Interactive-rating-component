@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body{
+    font-family: "Overpass", serif;
+    background-color: var(--Very-Dark-Blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main , .thank{
+    height: 60%;
+    width: 90%;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+main *  {
+    margin-bottom: 15px;
+}
+
+.main-figure {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow:  var(--Very-Dark-Blue) 0px 0px 5px;
+}
+
+figure img {
+    padding: 12px;
+}
+
+header h2 {
+    color: var(--White);
+
+}
+
+header p {
+    color: var(--Light-Grey);
+}
+
+.rates {
+    display: flex;
+    justify-content: space-between;
+}
+
+section button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow:  var() 0px 0px 5px;
+    outline: none;
+    background-color: var(--Dark-Blue);
+    border: none;
+    color: var(--White);
+    box-shadow:  var(--Very-Dark-Blue) 0px 0px 5px;
+    cursor: pointer;
+}
+
+
+section button:hover {
+    background-color: var(--Orange);
+    color: var(--Very-Dark-Blue);
+}
+
+.selected {
+    background-color: var(--Orange);
+    color: var(--Very-Dark-Blue);
+}
+
+.submitbtn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    outline: none;
+    background-color: var(--Orange);
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.submitbtn:hover {
+    background-color: var(--White);
+}
+
+
+@media screen and (min-width:768px) {
+    main ,.thank {
+        height: 52%;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main ,.thank {
+        height: 52%;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    main ,.thank {
+        height: 52%;
+        width: 30%;
+    }
+}
+
+.thank {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.thank * {
+    margin-bottom: 10px;
+}
+
+.thank article  {
+    color: var(--Orange);
+    padding: 5px 20px;
+    border-radius: 30px;
+    box-shadow:  var(--Dark-Blue) 0px 0px 5px;
+    border: 1px solid var(--Very-Dark-Blue);
+}
+
+.thank article p {
+    margin-bottom: 0;
+}
+
+.thank section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.thank section h2 {
+    color: var(--White);
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.thank section p {
+    color: var(--Light-Grey);
+}
+
+
+.active {
+    background-color: #fb7413;
+    color: white;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    animation: slideIn 0.3s ease;
+}
+
+.error {
+    background-color: #ff4747;
+    color: white;
+}
+
+.success {
+    background-color: #28a745;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
